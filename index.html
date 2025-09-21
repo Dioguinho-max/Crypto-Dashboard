@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen p-6">
+  <div class="container mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center">📊 Crypto Dashboard</h1>
+    <div id="crypto-list" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+
+    <div class="mt-8 bg-gray-800 p-4 rounded-lg shadow">
+      <h2 class="text-xl mb-3">Gráfico</h2>
+      <div class="flex gap-2 mb-3">
+        <button onclick="showChart(selectedCoin,1)" class="px-2 py-1 bg-blue-600 rounded text-sm">1D</button>
+        <button onclick="showChart(selectedCoin,3)" class="px-2 py-1 bg-blue-600 rounded text-sm">3D</button>
+        <button onclick="showChart(selectedCoin,5)" class="px-2 py-1 bg-blue-600 rounded text-sm">5D</button>
+      </div>
+      <div class="h-80">
+        <canvas id="priceChart" class="w-full h-full"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
