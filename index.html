@@ -4,12 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crypto Dashboard</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="icon" href="data:,">
 </head>
 <body class="bg-gray-900 text-white min-h-screen p-6">
   <div class="container mx-auto">
     <h1 class="text-3xl font-bold mb-6 text-center">📊 Crypto Dashboard</h1>
+
+    <div class="mb-6 bg-gray-800 p-4 rounded-lg">
+      <label class="block mb-2">🔑 Sua CoinGecko API Key:</label>
+      <input id="apiKey" type="text" placeholder="Cole sua chave aqui" class="w-full p-2 rounded text-black" oninput="setApiKey(this.value)">
+      <p class="text-sm text-gray-400 mt-2">Crie uma chave gratuita em <a href="https://www.coingecko.com/en/api" target="_blank" class="text-blue-400 underline">CoinGecko API</a></p>
+    </div>
+
     <div id="crypto-list" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
 
     <div class="mt-8 bg-gray-800 p-4 rounded-lg shadow">
